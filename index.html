@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Registration</title>
+  </head>
+  <body>
+    <h1>User Registration Form</h1>
+    <p>
+      <i>Please complete the following form to register with out website.</i>
+    </p>
+    <div class="form">
+      <form action="onSubmit">
+        <label for="uname">Username</label><br />
+        <input
+          class="inp"
+          type="text"
+          placeholder="Username"
+          id="uname"
+          size="10"
+          pattern="[A-Za-z0-9_-]{3,20}"
+          required
+        />
+        <br /><br />
+        <label for="passw">Password</label><br />
+        <input
+          class="inp"
+          type="password"
+          placeholder="Password"
+          size="20"
+          pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+          required
+        /><br /><br />
+        <label class="sex">Gender:</label>
+        <input type="radio" id="gender" name="radSex" required />
+        <label for="gender">Male</label>
+        <input type="radio" id="genderf" name="radSex" required />
+        <label for="genderf">Female</label><br /><br />
+
+        <label>How did you hear about us?</label>
+        <select name="selReferrer">
+          <option selected="selected" value="">Select answer</option>
+          <option value="website">Another website</option>
+          <option value="printAd">Magazine ad</option>
+          <option value="friend">From a friend</option>
+          <option value="other">Other</option></select
+        ><br /><br />
+        <label for="agreement" class="agr">
+          Please select this box if you wish to be added to our mailing list. We
+          will not pass on your details to any third party.
+        </label>
+        <input class="agrc" type="checkbox" name="agree" id="agreement" /><br />
+
+        <br /><button type="submit">Register</button>
+      </form>
+    </div>
+  </body>
+</html>
